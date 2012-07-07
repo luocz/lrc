@@ -30,24 +30,80 @@
         <section id="main-content">
           <h3>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>无法想象这是一件多么伟大的事（针对本人来说） ，有史以来的第一个开源！  本插件有效的解决了HTml5 音频播放器 同步歌词的问题与困惑，  为广大音乐爱好者与音乐站长 提供了良好的歌词播放插件！ 他的强大之处在于，可以直接读取原歌词文件歌词并且解析问播放可以认识的最终格式！</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>
+  本人：罗春宗: 1992.8 
+  现居于：中国广州深圳
+  下面就来详细的看看
+  如有不懂之处 还请留言 
+  163邮箱： luoczi@163.com
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>还请大家多多指教，留言</p>
 
-<h3>Designer Templates</h3>
+<h3>介绍</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>项目中包括了 3 个文件
+  <ul>
+    <li>lczlrc.css  </li>
+    <li>lczlrc.js</li>
+    <li>lrc.html</li>
+  </ul>
+</p>
 
-<h3>Rather Drive Stick?</h3>
+<h3>灵动的力量</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>将js 文件导入播放器页面，注意默认的是HTML5 中的audio 或 vedio  标签，如果是其他，还需要使用之配置一个适配器了
+  一般的将文件最后导入 为妙，
+<br>
+  引入之后，只需要 4 行代码就可搞定
+  <ul>
+    <li>lcz.set;rc_objec('歌词显示标签的id')</li>
+    <li>lcz.mf_Init();</li>
+    <li>lcz.load(lcz.Read('歌词原格式'，解析器)，回调函数，也就是解析完必之后的第一个处理函数)</li>
+    与播放器挂钩： 在播放器的 ontimeupdate  事件中加入一个函数  lcz.torun(); 
+  </ul>
+   <br>
+  其次： 
+      <p>
+        <h4>工具中自动 带了 两个解析器：</h4>
+          1. lcz.Read();  默认解析器： 解析一般歌词  就是单时间格式的  [00:12.30]歌词
+          2. lcz.vls1();  加强型：  更高级点 可以解析多时间歌词   [00:00.45][10.50.20].. 歌词
+      </p>
+      
+      <p>
+          <h4>同样的有两个 时间追踪器</h4>
+            1.   lcz.getLrcByVlue(var);       // 相对于两者，反应较慢  （默认）
+            2.   lcz.getLrcByValueInd(var);   //相对于两者，反应快 （在歌曲快进，快退是表现明显）
+      </p>
+      <p>
+        <h4> 当让还有 其他 可以设置 哦</h4>
+        <pre>
+          lcz.classV1="v1"; //一号className(原始) 
+       lcz.classV2="v2"; //二号className (设定)
+     	lcz.classV3="v3"; //三号className  (另类)
+     	lcz.initTop = 200;  //初始化显示位置 200 px
+     	lcz.center = 150;   //歌词焦点中心位置   50 px 
+     	lcz.empty = 20;   //初始化构建多少个 空对象 （ 同时表示 头和尾）
+     	lcz.isDropLrc = true;  //是否启用本地歌词 拖入功能
+     		// 解读歌词过程中用到的 标记
+     	lcz.tag = {
+         	sname :"ti",  //歌曲名
+         	cname :"cl",  //作词
+         	qname :"cs",  //作曲
+         	bname :"ps",   //编曲
+         	sgname :"ar",    //歌手名称
+         	special :"al",   //所属专辑
+         	kname :"by",		//歌词制作
+         	end :"end"    //结束 语
+     	};
 
-<h3>Authors and Contributors</h3>
+        </pre>
+      </p>
+</p>
+
+<h3>就到这儿吧！ 如果还有疑问 敬请留言！</h3>
 
 <p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
